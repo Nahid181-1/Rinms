@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIMNS - Movie Streaming</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Netflix-like font -->
+</head>
+<body>
+    <!-- Header with logo and nav -->
+    <header>
+        <div class="header-content">
+            <a class="logo" href="index.html" aria-label="RIMNS">RIMNS</a>
+            <nav>
+             <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#genres">Genres</a></li>
+                    <li><a href="#my-list">My List</a></li>
+                </ul>
+            </nav>
+            <input type="text" id="search-bar" placeholder="Search movies...">
+        </div>
+    </header>
+
+    <!-- Left sidebar (Netflix-like) -->
+    <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-top">
+            <h2 class="sidebar-logo">RIMNS</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><button class="sb-btn">🏠 Home</button></li>
+                <li><button class="sb-btn">🔍 Search</button></li>
+                <li><button class="sb-btn">📺 Series</button></li>
+                <li><button class="sb-btn">🎬 Movies</button></li>
+                <li><button class="sb-btn">⭐ My List</button></li>
+                <li><button class="sb-btn">🔖 Genres</button></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Hero Banner (Featured Movie) -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-indicators">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+</div>
+            <h2 id="hero-title">Inception</h2>
+            <p id="hero-description">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+            <button id="hero-play-btn">Play</button>
+            <button id="hero-info-btn">More Info</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Main content area -->
+    <main id="main-content">
+        <!-- Home page: Grid of movie cards -->
+        <section id="home-view" class="view active">
+            <h2>Trending Now</h2>
+            <div id="filters" class="filters">
+                <div id="genre-filters" class="genre-filters"></div>
+            </div>
+            <div id="categories" class="categories"></div>
+            <div id="movie-grid" class="movie-grid">
+                <!-- Movie cards will be dynamically inserted here -->
+            </div>
+            <div id="pagination" class="pagination" aria-label="Pagination">
+                <button id="prev-page" class="page-btn">Prev</button>
+                <span id="page-info" class="page-info">Page 1</span>
+                <button id="next-page" class="page-btn">Next</button>
+            </div>
+        </section>
+
+        <!-- Movie details page -->
+        <section id="details-view" class="view">
+            <button id="back-btn">Back to Home</button>
+            <div id="movie-details">
+                <!-- Movie details will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 RIMNS. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
